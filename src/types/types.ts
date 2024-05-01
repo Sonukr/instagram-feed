@@ -50,3 +50,7 @@ export interface PostProps {
 export interface PostListProps {
   posts: PostItemProps[];
 }
+
+export interface LoaderProps {
+  title: string
+}
