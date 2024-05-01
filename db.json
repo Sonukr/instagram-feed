@@ -1,0 +1,358 @@
+{
+  "stories": [
+    {
+      "id": "1",
+      "url": "https://videos.pexels.com/video-files/4434150/4434150-hd_1080_1920_30fps.mp4",
+      "userId": "user1",
+      "username": "User 1",
+      "duration": 4,
+      "type": "video"
+    },
+    {
+      "id": "2",
+      "url": "https://picsum.photos/200/300?random=2",
+      "userId": "user2",
+      "username": "User 2",
+      "duration": 7,
+      "type": "image"
+    },
+    {
+      "id": "3",
+      "url": "https://picsum.photos/200/300?random=3",
+      "userId": "user3",
+      "username": "User 3",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "4",
+      "url": "https://picsum.photos/200/300?random=4",
+      "userId": "user4",
+      "username": "User 4",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "5",
+      "url": "https://picsum.photos/200/300?random=5",
+      "userId": "user5",
+      "username": "User 5",
+      "duration": 5,
+      "type": "image"
+    },
+    {
+      "id": "6",
+      "url": "https://picsum.photos/200/300?random=6",
+      "userId": "user6",
+      "username": "User 6",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "7",
+      "url": "https://picsum.photos/200/300?random=7",
+      "userId": "user7",
+      "username": "User 7",
+      "duration": 8,
+      "type": "image"
+    },
+    {
+      "id": "8",
+      "url": "https://picsum.photos/200/300?random=8",
+      "userId": "user8",
+      "username": "User 8",
+      "duration": 7,
+      "type": "image"
+    },
+    {
+      "id": "9",
+      "url": "https://picsum.photos/200/300?random=9",
+      "userId": "user9",
+      "username": "User 9",
+      "duration": 7,
+      "type": "image"
+    },
+    {
+      "id": "10",
+      "url": "https://picsum.photos/200/300?random=10",
+      "userId": "user10",
+      "username": "User 10",
+      "duration": 11,
+      "type": "image"
+    },
+    {
+      "id": "11",
+      "url": "https://picsum.photos/200/300?random=11",
+      "userId": "user11",
+      "username": "User 11",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "12",
+      "url": "https://picsum.photos/200/300?random=12",
+      "userId": "user12",
+      "username": "User 12",
+      "duration": 12,
+      "type": "image"
+    },
+    {
+      "id": "13",
+      "url": "https://picsum.photos/200/300?random=13",
+      "userId": "user13",
+      "username": "User 13",
+      "duration": 5,
+      "type": "image"
+    },
+    {
+      "id": "14",
+      "url": "https://picsum.photos/200/300?random=14",
+      "userId": "user14",
+      "username": "User 14",
+      "duration": 11,
+      "type": "image"
+    },
+    {
+      "id": "15",
+      "url": "https://picsum.photos/200/300?random=15",
+      "userId": "user15",
+      "username": "User 15",
+      "duration": 7,
+      "type": "image"
+    },
+    {
+      "id": "16",
+      "url": "https://picsum.photos/200/300?random=16",
+      "userId": "user16",
+      "username": "User 16",
+      "duration": 6,
+      "type": "image"
+    },
+    {
+      "id": "17",
+      "url": "https://picsum.photos/200/300?random=17",
+      "userId": "user17",
+      "username": "User 17",
+      "duration": 10,
+      "type": "image"
+    },
+    {
+      "id": "18",
+      "url": "https://picsum.photos/200/300?random=18",
+      "userId": "user18",
+      "username": "User 18",
+      "duration": 9,
+      "type": "image"
+    },
+    {
+      "id": "19",
+      "url": "https://picsum.photos/200/300?random=19",
+      "userId": "user19",
+      "username": "User 19",
+      "duration": 8,
+      "type": "image"
+    },
+    {
+      "id": "20",
+      "url": "https://picsum.photos/200/300?random=20",
+      "userId": "user20",
+      "username": "User 20",
+      "duration": 12,
+      "type": "image"
+    },
+    {
+      "id": "21",
+      "url": "https://picsum.photos/200/300?random=21",
+      "userId": "user21",
+      "username": "User 21",
+      "duration": 10,
+      "type": "image"
+    },
+    {
+      "id": "22",
+      "url": "https://picsum.photos/200/300?random=22",
+      "userId": "user22",
+      "username": "User 22",
+      "duration": 4,
+      "type": "image"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "url": "https://videos.pexels.com/video-files/4434150/4434150-hd_1080_1920_30fps.mp4",
+      "userId": "user1",
+      "username": "User 1",
+      "duration": 4,
+      "type": "video"
+    },
+    {
+      "id": "2",
+      "url": "https://picsum.photos/200/300?random=2",
+      "userId": "user2",
+      "username": "User 2",
+      "duration": 6,
+      "type": "image"
+    },
+    {
+      "id": "3",
+      "url": "https://picsum.photos/200/300?random=3",
+      "userId": "user3",
+      "username": "User 3",
+      "duration": 8,
+      "type": "image"
+    },
+    {
+      "id": "4",
+      "url": "https://picsum.photos/200/300?random=4",
+      "userId": "user4",
+      "username": "User 4",
+      "duration": 5,
+      "type": "image"
+    },
+    {
+      "id": "5",
+      "url": "https://picsum.photos/200/300?random=5",
+      "userId": "user5",
+      "username": "User 5",
+      "duration": 12,
+      "type": "image"
+    },
+    {
+      "id": "6",
+      "url": "https://picsum.photos/200/300?random=6",
+      "userId": "user6",
+      "username": "User 6",
+      "duration": 6,
+      "type": "image"
+    },
+    {
+      "id": "7",
+      "url": "https://picsum.photos/200/300?random=7",
+      "userId": "user7",
+      "username": "User 7",
+      "duration": 9,
+      "type": "image"
+    },
+    {
+      "id": "8",
+      "url": "https://picsum.photos/200/300?random=8",
+      "userId": "user8",
+      "username": "User 8",
+      "duration": 11,
+      "type": "image"
+    },
+    {
+      "id": "9",
+      "url": "https://picsum.photos/200/300?random=9",
+      "userId": "user9",
+      "username": "User 9",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "10",
+      "url": "https://picsum.photos/200/300?random=10",
+      "userId": "user10",
+      "username": "User 10",
+      "duration": 11,
+      "type": "image"
+    },
+    {
+      "id": "11",
+      "url": "https://picsum.photos/200/300?random=11",
+      "userId": "user11",
+      "username": "User 11",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "12",
+      "url": "https://picsum.photos/200/300?random=12",
+      "userId": "user12",
+      "username": "User 12",
+      "duration": 8,
+      "type": "image"
+    },
+    {
+      "id": "13",
+      "url": "https://picsum.photos/200/300?random=13",
+      "userId": "user13",
+      "username": "User 13",
+      "duration": 9,
+      "type": "image"
+    },
+    {
+      "id": "14",
+      "url": "https://picsum.photos/200/300?random=14",
+      "userId": "user14",
+      "username": "User 14",
+      "duration": 4,
+      "type": "image"
+    },
+    {
+      "id": "15",
+      "url": "https://picsum.photos/200/300?random=15",
+      "userId": "user15",
+      "username": "User 15",
+      "duration": 9,
+      "type": "image"
+    },
+    {
+      "id": "16",
+      "url": "https://picsum.photos/200/300?random=16",
+      "userId": "user16",
+      "username": "User 16",
+      "duration": 3,
+      "type": "image"
+    },
+    {
+      "id": "17",
+      "url": "https://picsum.photos/200/300?random=17",
+      "userId": "user17",
+      "username": "User 17",
+      "duration": 10,
+      "type": "image"
+    },
+    {
+      "id": "18",
+      "url": "https://picsum.photos/200/300?random=18",
+      "userId": "user18",
+      "username": "User 18",
+      "duration": 5,
+      "type": "image"
+    },
+    {
+      "id": "19",
+      "url": "https://picsum.photos/200/300?random=19",
+      "userId": "user19",
+      "username": "User 19",
+      "duration": 9,
+      "type": "image"
+    },
+    {
+      "id": "20",
+      "url": "https://picsum.photos/200/300?random=20",
+      "userId": "user20",
+      "username": "User 20",
+      "duration": 9,
+      "type": "image"
+    },
+    {
+      "id": "21",
+      "url": "https://picsum.photos/200/300?random=21",
+      "userId": "user21",
+      "username": "User 21",
+      "duration": 6,
+      "type": "image"
+    },
+    {
+      "id": "22",
+      "url": "https://picsum.photos/200/300?random=22",
+      "userId": "user22",
+      "username": "User 22",
+      "duration": 11,
+      "type": "image"
+    }
+  ]
+}
