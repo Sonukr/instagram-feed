@@ -8,47 +8,32 @@ import useFetch from './Hooks/useFetch';
 import PostLists from './Components/PostList';
 import Loader from './Components/loader';
 
+let url = 'http://localhost:8000';
+
 function App() {
 
   const [currentStory, setCurrentStory] = useState<StoryItemProps | null>(null);
   const [storyOpen, setStoryOpen] = useState(false)
 
+  const searchParams = new URLSearchParams(window.location.search);
+  const server = searchParams.get('server');
   const handleStoryClick = (story: StoryItemProps) => {
     console.log(story);
     setCurrentStory(story);
     setStoryOpen(true)
   }
 
-
-  // const stories = [{
-  //   id: String(1),
-  //   url: 'https://videos.pexels.com/video-files/4434150/4434150-hd_1080_1920_30fps.mp4',
-  //   userId: 'user1',
-  //   username:'User 1',
-  //   duration: Math.floor(Math.random() * 2) + 3, // Random duration between 3 and 12 seconds
-  //   type: 'video'
-  // }]
-
-  // for (let i = 2; i <= 22; i++) {
-  //   stories.push({
-  //     id: String(i),
-  //     url: `https://picsum.photos/200/300?random=${i}`,
-  //     userId: `user${i}`,
-  //     username: `User ${i}`,
-  //     duration: Math.floor(Math.random() * 10) + 3, // Random duration between 3 and 12 seconds
-  //     type: 'image'
-  //   });
-  // }
-
-
   const handleCloseStory = () => {
     setStoryOpen(false);
     setCurrentStory(null);
   }
 
-  // const { data, loading, error } = useFetch<StoryItem[]>('http://localhost:8000/stories');
-  const { data: stories, loading, error } = useFetch<StoryItemProps[]>('http://localhost:8000/stories') as { data: StoryItemProps[]; loading: boolean; error: Error | null };
-  const { data: posts, loading: postLoading, error: postError } = useFetch<PostItemProps[]>('http://localhost:8000/stories') as unknown as { data: PostItemProps[]; loading: boolean; error: Error | null };
+  if(server === 'rest'){
+    url = 'https://rest-server-28ps.onrender.com';
+  }
+
+  const { data: stories, loading, error } = useFetch<StoryItemProps[]>(`${url}/stories`) as { data: StoryItemProps[]; loading: boolean; error: Error | null };
+  const { data: posts, loading: postLoading, error: postError } = useFetch<PostItemProps[]>(`${url}/stories`)  as { data: PostItemProps[]; loading: boolean; error: Error | null };
 
 
   if (loading) {
@@ -57,8 +42,6 @@ function App() {
       <Loader title="Loading..."/>
     )
   }
- debugger
-
 
  if(!stories || !posts){
   return(
