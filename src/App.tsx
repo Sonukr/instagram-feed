@@ -62,7 +62,7 @@ function App() {
 
  if(!stories || !posts){
   return(
-   <Loader title={'Please start the server.'}/>
+   <Loader title={'Please start the server, Check Readme.'}/>
     
   )
  }
