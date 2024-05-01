@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import StoryList from './Components/StoryList';
-import { PostItemProps, PostListProps, StoryItemProps } from './types/types';
+import { PostItemProps, StoryItemProps } from './types/types';
 import StoryViewer from './Components/StoryViewer';
 import useFetch from './Hooks/useFetch';
 import PostLists from './Components/PostList';
@@ -13,18 +12,15 @@ let url = 'http://localhost:8000';
 function App() {
 
   const [currentStory, setCurrentStory] = useState<StoryItemProps | null>(null);
-  const [storyOpen, setStoryOpen] = useState(false)
 
   const searchParams = new URLSearchParams(window.location.search);
   const server = searchParams.get('server');
   const handleStoryClick = (story: StoryItemProps) => {
     console.log(story);
     setCurrentStory(story);
-    setStoryOpen(true)
   }
 
   const handleCloseStory = () => {
-    setStoryOpen(false);
     setCurrentStory(null);
   }
 
@@ -32,12 +28,11 @@ function App() {
     url = 'https://rest-server-28ps.onrender.com';
   }
 
-  const { data: stories, loading, error } = useFetch<StoryItemProps[]>(`${url}/stories`) as { data: StoryItemProps[]; loading: boolean; error: Error | null };
-  const { data: posts, loading: postLoading, error: postError } = useFetch<PostItemProps[]>(`${url}/stories`)  as { data: PostItemProps[]; loading: boolean; error: Error | null };
+  const { data: stories, loading } = useFetch<StoryItemProps[]>(`${url}/stories`) as { data: StoryItemProps[]; loading: boolean; error: Error | null };
+  const { data: posts } = useFetch<PostItemProps[]>(`${url}/stories`)  as { data: PostItemProps[]; loading: boolean; error: Error | null };
 
 
   if (loading) {
-
     return (
       <Loader title="Loading..."/>
     )
@@ -52,17 +47,18 @@ function App() {
 
   return (
     <>
-      {stories && stories.length && <>
-        <StoryList stories={stories} onStoryClick={handleStoryClick} />
-        {currentStory &&
-          <StoryViewer
-            story={currentStory}
-            stories={stories}
-            onClose={handleCloseStory}
-          />
-        }
-        <PostLists posts={posts}/>
-      </>
+      {stories && stories.length &&
+        <>
+          <StoryList stories={stories} onStoryClick={handleStoryClick} />
+          {currentStory &&
+            <StoryViewer
+              story={currentStory}
+              stories={stories}
+              onClose={handleCloseStory}
+            />
+          }
+          <PostLists posts={posts}/>
+        </>
       }
     </>
   );

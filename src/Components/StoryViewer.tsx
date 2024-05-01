@@ -7,7 +7,6 @@ import { ChevronLeft, ChevronRight, CircleX } from 'lucide-react';
 
 const StoryViewer: React.FC<StoryViewerProps> = ({ story: currentStory, onClose, stories, setShowUserProfile }) => {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [showUserProfile, setShowUserProfileState] = useState(false);
   const [story, setStory] = useState(currentStory);
   const [currentStoryIndex, setCurrentStoryIndex] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -55,30 +54,8 @@ const StoryViewer: React.FC<StoryViewerProps> = ({ story: currentStory, onClose,
   };
 
   const handleCloseViewer = () => {
-    onClose && onClose(); // Call onClose here
+    onClose && onClose(); 
   };
-
-  // const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
-  //   const startX = event.touches ? event.touches[0].clientX : event.clientX;
-  //   const handleTouchMove = (moveEvent: React.TouchEvent<HTMLDivElement>) => {
-  //     const deltaX = (moveEvent.touches ? moveEvent.touches[0].clientX : moveEvent.clientX) - startX;
-  //     if (deltaX > 50) { // Threshold for swipe left
-  //       handlePreviousStory();
-  //     } else if (deltaX < -50) { // Threshold for swipe right
-  //       onClose(() => handleStoryOpen(stories[(currentStoryIndex + 1) % stories.length]));
-  //     }
-  //     document.removeEventListener('touchmove', handleTouchMove);
-  //   };
-  //   document.addEventListener('touchmove', handleTouchMove, { passive: true });
-  // };
-
-  // const handleTouchEnd = (endEvent: React.TouchEvent<HTMLDivElement>) => {
-  //   const startY = endEvent.touches ? endEvent.touches[0].clientY : endEvent.clientY;
-  //   const endY = endEvent.touches ? endEvent.touches[0].clientY : endEvent.clientY;
-  //   if (startY - endY > 50) { // Threshold for swipe up
-  //     setShowUserProfileState(true);
-  //   }
-  // };
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -100,12 +77,6 @@ const StoryViewer: React.FC<StoryViewerProps> = ({ story: currentStory, onClose,
       videoRef.current?.play();
     }
   }
-
-  // if (videoRef.current) {
-  //   videoRef.current.addEventListener('play', handlePlayPause);
-  //   videoRef.current.addEventListener('pause', handlePlayPause);
-  // }
-
   return (
     <div className="story-viewer" 
     // onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}
@@ -125,7 +96,6 @@ const StoryViewer: React.FC<StoryViewerProps> = ({ story: currentStory, onClose,
         <ChevronRight color='#fff'/>
       </div>
       <div onClick={handleCloseViewer} className="close-button"><CircleX color="#fff"/></div>
-      {showUserProfile && <div className="user-profile">{/* User profile content */}</div>}
     </div>
   );
 };

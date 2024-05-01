@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { StoryProps } from '../types/types';
-import { CirclePlay } from 'lucide-react';
+import { CirclePlay, CircleUserRound } from 'lucide-react';
 
 
 
 const Story: React.FC<StoryProps> = ({ story, isPlaying, onStoryEnd, handlePlayPause, videoRef }) => {
   const [progress, setProgress] = React.useState(0);
-  
+  const [isFlipped, setIsFlipped] = React.useState(false); 
 
   useEffect(()=> {
     if(story) setProgress(0);
+    setIsFlipped(!isFlipped);
   }, [story])
+
   useEffect(() => {
     if (isPlaying) {
       const intervalId = setInterval(() => {
@@ -23,6 +25,7 @@ const Story: React.FC<StoryProps> = ({ story, isPlaying, onStoryEnd, handlePlayP
   }, [isPlaying, story.duration]);
 
   if (progress === 100 && onStoryEnd) {
+    setIsFlipped(!isFlipped);
     setProgress(0);
     onStoryEnd();
   }
@@ -31,7 +34,9 @@ const Story: React.FC<StoryProps> = ({ story, isPlaying, onStoryEnd, handlePlayP
     <div className="story">
       <div className="image-wrapper" onClick={handlePlayPause}>
           {story.type === 'image' ?
-              <img src={story.url} alt="" /> :
+              <img src={story.url} alt="" 
+                className={`image-transition ${isFlipped ? 'flipped' : ''}`}
+              /> :
               <video src={story.url} autoPlay ref={videoRef}></video>
           }
         <div className="image-mask"></div>
@@ -44,7 +49,10 @@ const Story: React.FC<StoryProps> = ({ story, isPlaying, onStoryEnd, handlePlayP
         {isPlaying && (
           <ProgressBar now={progress} striped animated variant="primary" />
         )}
-       <p>{story.username}</p>
+       <div className="story-user">
+        <CircleUserRound />
+        <span>{story.username}</span>
+        </div>
       </div>
       
       {/* <button onClick={handlePlayPause}>{isPlaying ? 'Pause' : 'Play'}</button> */}
