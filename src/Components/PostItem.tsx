@@ -15,7 +15,7 @@ const PostItem: React.FC<PostProps> = ({post}) => {
       <div className='post-imageWrapper'>
         {/* Display post content (title, image, etc.) based on type */}
         {type === 'image' && <img src={url} alt={username + ' post'} />}
-        {type === 'video' && <video src={url} controls />}
+        {type === 'video' && <video src={url} autoPlay muted />}
       </div>
     </div>
   );
